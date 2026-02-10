@@ -1,2 +1,69 @@
-# clock
-simple clock theme
+# sample
+
+a simple Roff document project. Roff (short for "runoff") is a text formatting system used for creating Unix man pages and other technical documentation.Let me create a simple Roff file for you as plain text that you can save:
+
+```roff
+.\" Sample Roff Document
+.\" This is a comment - lines starting with .\" are comments
+.TH SAMPLE 1 "February 2026" "Version 1.0" "User Manual"
+.
+.SH NAME
+sample \- a simple demonstration of Roff formatting
+.
+.SH SYNOPSIS
+.B sample
+.RI [ options ]
+.RI [ file ...]
+.
+.SH DESCRIPTION
+This is a simple Roff document that demonstrates basic text formatting
+capabilities. Roff is commonly used for creating Unix manual pages.
+.PP
+This paragraph shows how to create regular text with proper formatting.
+The .PP macro creates a new paragraph with spacing.
+.PP
+You can format text in
+.B bold,
+.I italic,
+or combine styles.
+.
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Display help message and exit.
+.TP
+.B \-v, \-\-verbose
+Enable verbose output mode.
+.TP
+.B \-o, \-\-output FILE
+Specify output file (default: stdout).
+.
+.SH EXAMPLES
+Here are some usage examples:
+.PP
+.nf
+sample -h
+sample --verbose input.txt
+sample -o output.txt input.txt
+.fi
+.
+.SH AUTHOR
+Written for demonstration purposes.
+```
+
+**To use this file:**
+
+1. Save it as `sample.1` (the `.1` extension indicates a man page section 1)
+2. View it with: `man ./sample.1` or `groff -man -Tascii sample.1 | less`
+3. Convert to PDF: `groff -man -Tpdf sample.1 > sample.pdf`
+
+**Key Roff macros used:**
+- `.TH` - Title header
+- `.SH` - Section header
+- `.PP` - Paragraph break
+- `.B` - Bold text
+- `.I` - Italic text
+- `.TP` - Tagged paragraph (for option lists)
+- `.nf/.fi` - No fill / Fill (for code blocks)
+
+This creates a basic man page style document that's typical for Unix/Linux documentation!
