@@ -1,0 +1,60 @@
+.\" Simple Roff Document Example
+.\" This is a comment line
+.TH SAMPLE 1 "February 2026" "Version 1.0" "User Manual"
+.SH NAME
+sample \- a simple roff document example
+.SH SYNOPSIS
+.B sample
+[\fB\-h\fR]
+[\fB\-v\fR]
+[\fIfile\fR]
+.SH DESCRIPTION
+This is a simple roff document that demonstrates basic formatting capabilities.
+Roff is a powerful text formatting system used primarily for creating
+.B man pages
+and technical documentation.
+.PP
+This paragraph shows how to create multiple paragraphs using the
+.B .PP
+macro. Roff processes text line by line and applies formatting macros.
+.SH OPTIONS
+.TP
+.B \-h
+Display help information and exit.
+.TP
+.B \-v
+Display version information and exit.
+.TP
+.I file
+Specify the input file to process.
+.SH EXAMPLES
+Here are some usage examples:
+.PP
+.nf
+    sample input.txt
+    sample \-h
+    sample \-v
+.fi
+.SH FORMATTING EXAMPLES
+.SS Text Styles
+This demonstrates
+.B bold text,
+.I italic text,
+and
+.BR "bold italic" .
+.SS Lists
+You can create lists like this:
+.IP \(bu 3
+First item in the list
+.IP \(bu 3
+Second item in the list
+.IP \(bu 3
+Third item in the list
+.SH SEE ALSO
+.BR groff (1),
+.BR man (1),
+.BR troff (1)
+.SH AUTHOR
+Written as a demonstration document.
+.SH COPYRIGHT
+This is a sample document for educational purposes.
