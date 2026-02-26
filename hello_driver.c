@@ -1,12 +1,3 @@
-/*
- * hello_driver.c - A simple FreeBSD character device kernel driver
- *
- * Build:  make
- * Load:   kldload ./hello_driver.ko
- * Test:   cat /dev/hello
- * Unload: kldunload hello_driver
- */
-
 #include <sys/param.h>
 #include <sys/module.h>
 #include <sys/kernel.h>
@@ -14,10 +5,6 @@
 #include <sys/conf.h>
 #include <sys/uio.h>
 #include <sys/malloc.h>
-
-/* ------------------------------------------------------------------ */
-/* Driver state                                                         */
-/* ------------------------------------------------------------------ */
 
 #define DRIVER_NAME   "hello"
 #define HELLO_MSG     "Hello from the FreeBSD kernel!\n"
@@ -36,10 +23,6 @@ static struct cdevsw hello_cdevsw = {
 };
 
 static struct cdev *hello_dev;
-
-/* ------------------------------------------------------------------ */
-/* cdev operations                                                      */
-/* ------------------------------------------------------------------ */
 
 static int
 hello_open(struct cdev *dev, int oflags, int devtype, struct thread *td)
@@ -74,10 +57,6 @@ hello_read(struct cdev *dev, struct uio *uio, int ioflag)
 
     return (error);
 }
-
-/* ------------------------------------------------------------------ */
-/* Module lifecycle                                                     */
-/* ------------------------------------------------------------------ */
 
 static int
 hello_modevent(module_t mod __unused, int event, void *arg __unused)
