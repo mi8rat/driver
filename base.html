@@ -1,0 +1,28 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple CMS</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="brand">📝 Simple CMS</a>
+      <div class="nav-links">
+        <a href="/">Blog</a>
+        <a href="/admin">Admin</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    {{template "content" .}}
+  </main>
+  <footer>
+    <p>Built with Go &amp; love</p>
+  </footer>
+</body>
+</html>
+{{end}}
